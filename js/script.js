@@ -1,27 +1,11 @@
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.querySelector('.lightbox-img');
-const lightboxDescription = document.querySelector('.lightbox-description');
-const closeBtn = document.querySelector('.close');
-
-// document.querySelectorAll('.movie').forEach(movie => {
-//     movie.addEventListener('click', () => {
-//         const img = movie.querySelector('img'); // Get the image inside the movie
-//         const content = movie.getAttribute('data-lightbox-content'); // Get the data-lightbox-content attribute
-
-//         lightbox.style.display = 'flex'; // Show the lightbox
-//         lightboxImg.src = img.src; // Set the clicked image in lightbox
-//         lightboxDescription.innerHTML = content; // Set the dynamic HTML content
-//     });
-// });
-
 function openLightbox1() {
-    document.getElementById("lightbox").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = "Hello";
+    const lightbox = document.getElementById("lightbox_monster");
+    lightbox.style.display = "block";
+    const captionText = document.getElementById("caption");
+    captionText.innerHTML = "Who is the monster?";
 }
 
 function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
+    const lightbox = document.getElementById("lightbox_monster");
+    lightbox.style.display = "none";
 }
-
-f
