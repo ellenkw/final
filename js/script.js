@@ -11,7 +11,7 @@ function closeLightbox() {
 }
 
 document.querySelector("#monster_img").addEventListener("click", function(){
-    const lightbox = document.getElementById("lightbox_monster");
+    const lightbox = document.getElementsByClassName("lightbox");
     lightbox.style.display = "block";
     const captionText = document.getElementById("caption");
     captionText.innerHTML = "Who is the monster?";
