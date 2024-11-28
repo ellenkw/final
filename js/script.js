@@ -1,6 +1,6 @@
 // function openLightbox1() {
 //     const lightbox = document.getElementById("lightbox_monster");
-//     lightbox.style.display = "block";
+//     lightbox.style.display = "flex";
 //     const captionText = document.getElementById("caption");
 //     captionText.innerHTML = "Who is the monster?";
 // }
