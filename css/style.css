@@ -104,7 +104,7 @@ img {
     overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }
 
-.lightbox-description {
+.description-container {
     font-size: 16px;
     color: #333;
     text-align: left;
@@ -113,12 +113,6 @@ img {
     word-wrap: break-word;
     white-space: normal;
     max-width: 100%;
-}
-
-.lightbox-img {
-    max-width: 100%;
-    max-height: 300px;
-    border-radius: 10px;
 }
 
 .close {
@@ -138,10 +132,7 @@ img {
   cursor: pointer;
 }
 
-.lightbox-description div {
-    width: 300px;
-}
-.lightbox-description h3{
+.description-container h3{
     font-size: 30px;
     font-weight: 700;
 }
