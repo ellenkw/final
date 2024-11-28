@@ -25,8 +25,8 @@
         </div>
 
         <div class="content">
-            <div class="movie" data-lightbox-content="monster.html">
-                <img src="img/monster.jpg" alt="Poster of Hirokazu Goreeda's movie: Monster">
+            <div class="movie">
+                <img src="img/monster.jpg" alt="Poster of Hirokazu Goreeda's movie: Monster" onclick="openLightbox()">
                 <div class="info">
                     <p class="movie_title">Monster</p>
                     <p class="director">Hirokazu Goreeda</p>
@@ -34,8 +34,8 @@
                     <p>"Who is the monster?"</p>
                 </div>
             </div>
-            <div class="movie" data-lightbox-content="b">
-                <img src="img/ai.webp" alt="Movie 2">
+            <div class="movie">
+                <img src="img/ai.webp" alt="Movie 2" onclick="openLightbox()">
                 <div class="info">
                     <p class="movie_title">A.I.</p>
                     <p class="director">Steven Spielberg</p>
@@ -43,8 +43,8 @@
                     <p>An emotional journey through love and loss.</p>
                 </div>
             </div>
-            <div class="movie" data-lightbox-content="c">
-                <img src="img/loveletter.jpg" alt="Movie 3">
+            <div class="movie">
+                <img src="img/loveletter.jpg" alt="Movie 3" onclick="openLightbox()">
                 <div class="info">
                     <p class="movie_title">Love Letter</p>
                     <p class="director">Shunji Iwai</p>
@@ -52,8 +52,8 @@
                     <p>A fun family film full of laughs.</p>
                 </div>
             </div>
-            <div class="movie" data-lightbox-content="d">
-                <img src="img/eea.avif" alt="Movie 4">
+            <div class="movie">
+                <img src="img/eea.avif" alt="Movie 4" onclick="openLightbox()">
                 <div class="info">
                     <p class="movie_title">Everything Everywhere All at Once</p>
                     <p class="director">Daniel Scheinert, Daniel Kwan</p>
@@ -61,8 +61,8 @@
                     <p>An inspiring story of hope and resilience.</p>
                 </div>
             </div>
-            <div class="movie" data-lightbox-content="e">
-                <img src="img/mononoke.jpg" alt="Movie 5">
+            <div class="movie">
+                <img src="img/mononoke.jpg" alt="Movie 5" onclick="openLightbox()">
                 <div class="info">
                     <p class="movie_title">Princess Mononoke</p>
                     <p class="director">Hayao Miyazaki</p>
@@ -73,12 +73,32 @@
         </div>
     </div>
     <div id="lightbox" class="lightbox">
+        <span class="close cursor" onclick="closeLightbox()">&times;</span>
         <div class="lightbox-content">
-            <span class="close">&times;</span>
-            <img class="lightbox-img" src="" alt="Lightbox Image"> <!-- Ensure this exists -->
-            <div class="lightbox-description"></div> <!-- This will hold the dynamic HTML content -->
-        </div>
-    </div>
+            <div class="boxImage">
+                <img src="img/monster.jpg">
+            </div>
+
+            <div class="boxImage">
+                <img src="img/ai.webp">
+            </div>
+
+            <div class="boxImage">
+                <img src="img/loveletter.jpg">
+            </div>
+
+            <div class="boxImage">
+                <img src="img/eea.avif">
+            </div>
+
+            <div class="boxImage">
+                <img src="img/mononoke.jpg">
+            </div>
+
+            <div class="description-container">
+                <p id="lightbox-description"></p>
+            </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -4,35 +4,20 @@ const lightboxDescription = document.querySelector('.lightbox-description');
 const closeBtn = document.querySelector('.close');
 
 document.querySelectorAll('.movie').forEach(movie => {
-    movie.addEventListener('click', async () => {
+    movie.addEventListener('click', () => {
         const img = movie.querySelector('img'); // Get the image inside the movie
-        const contentUrl = movie.getAttribute('data-lightbox-content'); // Get the URL of the content file
+        const content = movie.getAttribute('data-lightbox-content'); // Get the data-lightbox-content attribute
 
         lightbox.style.display = 'flex'; // Show the lightbox
         lightboxImg.src = img.src; // Set the clicked image in lightbox
-
-        try {
-            const response = await fetch(contentUrl); // Fetch the content file
-            if (!response.ok) {
-                throw new Error('Failed to fetch lightbox content');
-            }
-            const content = await response.text(); // Read the content as text
-            lightboxDescription.innerHTML = content; // Set the dynamic HTML content
-        } catch (error) {
-            console.error(error);
-            lightboxDescription.innerHTML = '<p>Failed to load content.</p>'; // Display an error message
-        }
+        lightboxDescription.innerHTML = content; // Set the dynamic HTML content
     });
 });
 
 // Close lightbox
-closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-
-// Close lightbox on outside click
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
-});
+function openLightbox() {
+    document.getElementById("lightbox").style.display = "block";
+}
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
