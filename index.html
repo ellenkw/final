@@ -26,7 +26,7 @@
 
         <div class="content">
             <div class="movie">
-                <img src="img/monster.jpg" alt="Poster of Hirokazu Goreeda's movie: Monster" onclick="openLightbox()">
+                <img src="img/monster.jpg" alt="Poster of Hirokazu Goreeda's movie: Monster" onclick="openLightbox1()">
                 <div class="info">
                     <p class="movie_title">Monster</p>
                     <p class="director">Hirokazu Goreeda</p>
@@ -72,33 +72,17 @@
             </div>
         </div>
     </div>
-    <div id="lightbox" class="lightbox">
+    <div id="lightbox_monster" class="lightbox">
         <span class="close cursor" onclick="closeLightbox()">&times;</span>
         <div class="lightbox-content">
             <div class="boxImage">
                 <img src="img/monster.jpg">
             </div>
-
-            <div class="boxImage">
-                <img src="img/ai.webp">
-            </div>
-
-            <div class="boxImage">
-                <img src="img/loveletter.jpg">
-            </div>
-
-            <div class="boxImage">
-                <img src="img/eea.avif">
-            </div>
-
-            <div class="boxImage">
-                <img src="img/mononoke.jpg">
-            </div>
-
-            <div class="description-container">
+            <div id="monster_description" class="description-container">
                 <p id="lightbox-description"></p>
             </div>
-
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
